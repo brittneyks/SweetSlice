@@ -1,0 +1,281 @@
+/* SWEET SLICE - STYLE SHEET */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #fff7f2;
+
+    color: #3d2925;
+
+    line-height: 1.6;
+}
+
+
+/* HEADER */
+
+header {
+    background-color: #5b2c2c;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+
+header h1 {
+    margin: 0;
+
+    font-size: 2.4rem;
+}
+
+
+header p {
+    margin-bottom: 0;
+
+    font-size: 1.05rem;
+}
+
+
+/* NAVIGATION BUTTONS */
+
+nav {
+    background-color: #f0d5cc;
+
+    text-align: center;
+
+    padding: 18px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 10;
+}
+
+
+nav button {
+    background-color: #7b3f3f;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 12px 18px;
+
+    margin: 5px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+nav button:hover {
+    background-color: #4d2424;
+}
+
+
+/* MAIN AREA */
+
+main {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 30px auto;
+}
+
+
+/* RECIPE CARDS */
+
+.recipe {
+    background-color: white;
+
+    border: 2px solid #ead4ce;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    margin-bottom: 30px;
+
+    box-shadow: 0 4px 12px rgba(70, 35, 25, 0.12);
+
+    display: none;
+}
+
+
+/* JAVASCRIPT ADDS THIS CLASS */
+
+.recipe.active {
+    display: block;
+}
+
+
+/* CAKE IMAGES */
+
+.recipe img {
+    width: 100%;
+
+    max-height: 520px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    display: block;
+
+    margin-bottom: 25px;
+}
+
+
+/* RECIPE HEADINGS */
+
+.recipe-text h2 {
+    color: #6b3030;
+
+    font-size: 2rem;
+
+    margin-top: 0;
+}
+
+
+.recipe-text h3 {
+    color: #7b3f3f;
+
+    margin-top: 25px;
+}
+
+
+/* LISTS */
+
+.recipe-text ul,
+.recipe-text ol {
+    padding-left: 25px;
+}
+
+
+.recipe-text li {
+    margin-bottom: 7px;
+}
+
+
+/* SPECIAL NOTES */
+
+.note {
+    background-color: #fff1d6;
+
+    border-left: 5px solid #c58a35;
+
+    padding: 15px 18px;
+
+    margin-top: 25px;
+
+    border-radius: 6px;
+}
+
+
+/* AUTHOR SECTION */
+
+.author {
+    background-color: #f5e5df;
+
+    border: 2px solid #ead4ce;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    margin-top: 30px;
+}
+
+
+.author h2 {
+    color: #6b3030;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #5b2c2c;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 40px;
+}
+
+
+/* COMPUTER / TABLET */
+
+@media (min-width: 800px) {
+
+    .recipe.active {
+        display: grid;
+
+        grid-template-columns: 42% 58%;
+
+        gap: 30px;
+
+        align-items: start;
+    }
+
+
+    .recipe img {
+        position: sticky;
+
+        top: 90px;
+
+        margin-bottom: 0;
+
+        max-height: 650px;
+    }
+}
+
+
+/* PHONE */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 1.9rem;
+    }
+
+
+    nav button {
+        width: 90%;
+
+        margin: 5px auto;
+    }
+
+
+    main {
+        width: 94%;
+    }
+
+
+    .recipe {
+        padding: 16px;
+    }
+
+
+    .recipe-text h2 {
+        font-size: 1.6rem;
+    }
+
+}
